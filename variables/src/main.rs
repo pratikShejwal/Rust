@@ -1,10 +1,12 @@
+const ab = 32; // constant can be declare in global scope
 fn main() {
-   let a:i32 = 28;
+   let mut a:i32 = 28;
+   a = 2;
+   println!("{a}")
    println!("{a}");
    {
     let x = 32;
-    let x = x +10;
+    let x = x +10; // shadowing
     println!("{x}");
-    println!(x);
    }
 }
