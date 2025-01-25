@@ -1,6 +1,6 @@
 const ab = 32; // constant can be declare in global scope
 fn main() {
-   let mut a:i32 = 28;
+   let mut a:i32 = 28; // mutable variable
    a = 2;
    println!("{a}")
    println!("{a}");
