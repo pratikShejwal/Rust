@@ -1,3 +1,9 @@
+#[derive(Debug)]
+struct Rect{
+    height : u32,
+    width : u32,
+}
+
 struct User{
     name: String,
     email:String,
@@ -5,7 +11,14 @@ struct User{
     active:bool,
 
 }
-fn main() {   
+fn main() {  
+    let rs = Rect{
+        height : 10,
+        width : 20,
+    };
+    let area = rect_area(&rs);
+    println!("are of {:?} is {}",rs,area);
+   
 let mut user_1 = User{
     name:String::from("Pratik"),
     active:true,
@@ -33,4 +46,11 @@ fn create_user(name:String)->User{
     password:123,
     email:String::from("p@gmail.com"),
     }
+    
+
+    
+}
+
+fn rect_area(rs:&Rect)->u32{
+    rs.height * rs.width
 }
